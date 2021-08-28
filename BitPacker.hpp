@@ -36,6 +36,21 @@ public:
     void Reserve(const int id, const int size) {
         // TODO
     }
+    void Reserve(const int id, const int first, const int last) {
+        // TODO
+        // Reserve(12, 13, 29)
+        // Field 12 (17 bits):
+        // 0        1        2        3        4        5
+        // -------- -------- -------- -------- -------- --------
+        //              1    1   2    2   2    3   3    4   4
+        // 0   4    8   2    6   0    4   8    2   6    0   4
+        // 76543210 76543210 76543210 76543210 76543210 76543210
+        // 00000000 00000000 00000000 00000000 00000000 00000000
+        //               ^^^ ^^^^^^^^ ^^^^^^
+        // Field 12 Mask  : 0x1ffff
+        // Field 12 Value : 0x12345
+
+    }
     void Set(const int id, const uint64_t value) {
         // TODO
     }
